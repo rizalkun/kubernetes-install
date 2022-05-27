@@ -34,7 +34,6 @@ sudo sysctl --system
 sudo apt-get -y install containerd
 
 sudo systemctl daemon-reload
-sudo systemctl enable crio --now
 
 sudo systemctl enable kubelet
 

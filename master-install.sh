@@ -37,7 +37,6 @@ sudo apt update
 sudo apt install cri-o cri-o-runc -y
 
 sudo systemctl daemon-reload
-sudo systemctl enable crio --now
 
 sudo systemctl enable kubelet
 
