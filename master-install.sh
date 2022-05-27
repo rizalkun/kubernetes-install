@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [[ $USER != "root" ]]; then
-	echo "Sorry, you must run as root"
-	exit
-fi
+# if [[ $USER != "root" ]]; then
+# 	echo "Sorry, you must run as root"
+# 	exit
+# fi
 
 
 sudo apt update
@@ -43,7 +43,7 @@ add-apt-repository \
     $(lsb_release -cs) \
     stable"
 
-apt update && apt install -y containerd.io
+sudo apt update && apt install -y containerd.io
 
 sudo mkdir -p /etc/containerd
 sudo containerd config default | sudo tee /etc/containerd/config.toml
