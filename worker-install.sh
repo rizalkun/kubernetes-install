@@ -11,9 +11,9 @@ sudo apt -y upgrade
 
 sudo apt -y install curl apt-transport-https ca-certificates curl software-properties-common
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 sudo apt update
 sudo apt -y install vim git curl wget kubelet=1.23.6-00 kubeadm=1.23.6-00 kubectl=1.23.6-00
@@ -38,12 +38,12 @@ EOF
 
 sudo sysctl --system
 
-add-apt-repository \
+sudo add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) \
     stable"
 
-sudo apt update && apt install -y containerd.io
+sudo apt update && sudo apt install -y containerd.io
 
 sudo mkdir -p /etc/containerd
 sudo containerd config default | sudo tee /etc/containerd/config.toml
