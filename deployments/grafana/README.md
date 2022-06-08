@@ -25,6 +25,9 @@ helm install prometheus prometheus-community/kube-prometheus-stack --namespace m
 ```sh
 kubectl port-forward deployment/prometheus-grafana 3000
 ```
+Access: http://localhost:3000
+Username: admin
+Password: prom-operator
 ## Install Helm
 
 ```sh
