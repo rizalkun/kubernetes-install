@@ -6,7 +6,7 @@ Requirement.
 - Helm
 ## Grafana Only
 ```sh
-git clone git@github.com:rizalkun/kubernetes-install.git
+git clone https://github.com/rizalkun/kubernetes-install.git
 cd kubernetes-install/deployments/grafana
 kubectl -f apply deployment.yaml
 ```
