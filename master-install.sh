@@ -16,7 +16,7 @@ sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-ke
 sudo echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 sudo apt update
-sudo apt -y install vim git curl wget kubelet=1.26.6-00 kubeadm=1.26.6-00 kubectl=1.26.6-00
+sudo apt -y install vim git curl wget kubelet=1.28.4-00 kubeadm=1.28.4-00 kubectl=1.28.4-00
 sudo apt-mark hold kubelet kubeadm kubectl
 
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
